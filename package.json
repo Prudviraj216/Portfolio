@@ -1,32 +1,20 @@
+
 {
-  "name": "vercel-examples",
+  "name": "nextjs-portfolio",
   "version": "1.0.0",
-  "license": "MIT",
   "scripts": {
-    "prettier": "prettier --write .",
-    "update-templates": "node scripts/update-templates.mjs",
-    "new-example": "plop example",
-    "lint-staged": "lint-staged",
-    "prepare": "husky install"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
-  "pre-commit": "lint-staged",
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
   "devDependencies": {
-    "@vercel/fetch": "^6.2.0",
-    "dotenv": "^16.0.0",
-    "eslint": "^8.9.0",
-    "front-matter": "^4.0.2",
-    "husky": "^7.0.4",
-    "lint-staged": "^12.3.4",
-    "plop": "^3.0.5",
-    "prettier": "^2.5.1"
-  },
-  "lint-staged": {
-    "!(**/.vercel/**/*)**/*.{ts,tsx}": [
-      "prettier --write",
-      "eslint --no-ignore --max-warnings=0 --fix"
-    ],
-    "**/*.{json,md,mdx,css,html,yml,yaml,scss}": [
-      "prettier --write"
-    ]
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.0.0"
   }
 }
